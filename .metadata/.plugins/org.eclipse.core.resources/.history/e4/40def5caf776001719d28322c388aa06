@@ -1,0 +1,23 @@
+#ifndef NETWORK_H_NETWORKHANDLER_H_
+#define NETWORK_H_NETWORKHANDLER_H_
+#define PORT 8000
+#include <SFML/Network.hpp>
+#include <string>
+#include <iostream>
+#include "Reader.h"
+#include "JSONHandler.h"
+
+class Network_Handler {
+public:
+	Network_Handler();
+	void make_connection();
+	void send( std::string message );
+	void receive();
+	void check_server_status();  // checks the status of main server.
+	virtual ~Network_Handler();
+private:
+	sf::TcpSocket _socket;
+	Reader _reader;
+};
+
+#endif /* NETWORK_H_NETWORKHANDLER_H_ */

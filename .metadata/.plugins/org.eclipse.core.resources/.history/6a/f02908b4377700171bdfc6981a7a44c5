@@ -1,0 +1,12 @@
+#ifndef NETWORK_H_READER_H_
+#define NETWORK_H_READER_H_
+#include <SFML/Network.hpp>
+
+class Reader {
+public:
+	Reader();
+	void read( sf::Packet p );
+	virtual ~Reader();
+};
+
+#endif /* NETWORK_H_READER_H_ */

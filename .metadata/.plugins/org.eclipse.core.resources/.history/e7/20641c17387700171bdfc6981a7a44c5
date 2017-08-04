@@ -1,0 +1,24 @@
+/*
+ * Reader.cpp
+ *
+ *  Created on: Jul 31, 2017
+ *      Author: marcelo
+ */
+
+#include "Reader.h"
+
+Reader::Reader() {
+	// TODO Auto-generated constructor stub
+
+}
+
+void Reader::read( std::string message ) {
+	std::cout << message << std::endl;
+}
+
+
+
+Reader::~Reader() {
+	// TODO Auto-generated destructor stub
+}
+

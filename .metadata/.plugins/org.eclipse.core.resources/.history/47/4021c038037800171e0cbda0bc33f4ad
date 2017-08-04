@@ -1,0 +1,46 @@
+#include "NetworkHandler.h"
+
+Network_Handler::Network_Handler() {
+}
+
+void Network_Handler::make_connection() {
+	sf::IpAddress _address = sf::IpAddress::getLocalAddress();
+	_socket.setBlocking( false );
+	_socket.connect( _address, PORT );
+
+	//std::thread t( &Network_Handler::run, this );
+}
+
+void Network_Handler::run() {
+
+	std::cout << "running..." << std::endl;
+
+	std::runtime_error not_received( "The message was not received successfully" );
+	std::unique_lock< std::mutex > _lock( _mutex );
+	sf::Packet _packet;
+	std::string _message;
+
+	if ( _socket.receive( _packet ) == sf::Socket::Done) {
+		if( _packet >> _message ) {
+			_reader.read( _message );
+		} else {
+			throw not_received;
+		}
+	}
+
+}
+
+void Network_Handler::send( std::string message ) {
+	sf::Packet _packet;
+	_packet << message;
+	_socket.send( _packet );
+}
+
+void Network_Handler::check_server_status() {
+
+}
+
+Network_Handler::~Network_Handler() {
+	// TODO Auto-generated destructor stub
+}
+

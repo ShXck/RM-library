@@ -49,7 +49,7 @@ int main() {
 
 		std::getline( std::cin, _option );
 
-		process( std::stoi(_option ), _lib );
+		process( std::stoi( _option ), _lib );
 
 	}
 

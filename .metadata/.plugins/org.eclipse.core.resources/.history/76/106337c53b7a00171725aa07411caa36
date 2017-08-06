@@ -1,0 +1,17 @@
+/*
+ * Encrypter.h
+ *
+ *  Created on: Aug 5, 2017
+ *      Author: marcelo
+ */
+
+#ifndef NETWORK_H_ENCRYPTER_H_
+#define NETWORK_H_ENCRYPTER_H_
+
+class Encrypter {
+public:
+	Encrypter();
+	virtual ~Encrypter();
+};
+
+#endif /* NETWORK_H_ENCRYPTER_H_ */

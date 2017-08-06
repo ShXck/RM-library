@@ -29,7 +29,8 @@ src/network_h/Reader.o: ../src/network_h/Reader.cpp \
  /home/marcelo/Documents/libs/rapidjson/include/rapidjson/internal/itoa.h \
  /home/marcelo/Documents/libs/rapidjson/include/rapidjson/internal/itoa.h \
  /home/marcelo/Documents/libs/rapidjson/include/rapidjson/stringbuffer.h \
- /home/marcelo/Documents/libs/rapidjson/include/rapidjson/stringbuffer.h
+ /home/marcelo/Documents/libs/rapidjson/include/rapidjson/stringbuffer.h \
+ ../src/network_h/TempRefContainer.h ../src/network_h/Encrypter.h
 
 ../src/network_h/Reader.h:
 
@@ -94,3 +95,7 @@ src/network_h/Reader.o: ../src/network_h/Reader.cpp \
 /home/marcelo/Documents/libs/rapidjson/include/rapidjson/stringbuffer.h:
 
 /home/marcelo/Documents/libs/rapidjson/include/rapidjson/stringbuffer.h:
+
+../src/network_h/TempRefContainer.h:
+
+../src/network_h/Encrypter.h:

@@ -1,0 +1,18 @@
+/*
+ * Encrypter.cpp
+ *
+ *  Created on: Aug 5, 2017
+ *      Author: marcelo
+ */
+
+#include "Encrypter.h"
+
+Encrypter::Encrypter() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Encrypter::~Encrypter() {
+	// TODO Auto-generated destructor stub
+}
+

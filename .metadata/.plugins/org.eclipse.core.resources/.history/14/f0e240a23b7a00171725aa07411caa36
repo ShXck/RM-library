@@ -1,0 +1,23 @@
+#ifndef NETWORK_H_ENCRYPTER_H_
+#define NETWORK_H_ENCRYPTER_H_
+#include <string>
+#include <iostream>
+
+class Encrypter {
+public:
+	Encrypter();
+	std::string apply( std::string data ) {
+		char _key[3] = { 'S', 'K', 'F' };
+		std::string _result = data;
+
+		for( int i = 0; i < data.size(); i++ ) {
+			_result[ i ] = data[ i ] ^ _key[ i % ( sizeof( _key ) / sizeof( char ) )];
+		}
+
+		std::cout << "Result: " << _result << std::endl;
+
+		return _result;
+	}
+};
+
+#endif /* NETWORK_H_ENCRYPTER_H_ */

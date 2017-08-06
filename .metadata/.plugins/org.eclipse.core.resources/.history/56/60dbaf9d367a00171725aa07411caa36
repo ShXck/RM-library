@@ -1,0 +1,32 @@
+#include "Reader.h"
+
+Reader::Reader() { }
+
+void Reader::read( std::string message, Temp_Ref_Container& container ) {
+	std::cout << message << std::endl;
+	rm::rmRef_h new_ref = process_data( message.c_str() );
+	container.set_ref( &new_ref );
+}
+
+rm::rmRef_h Reader::process_data( const char* data ) {
+
+	check_for_exception( JSON_Handler::get_value( data, "error" ).GetBool() );
+
+	const char* data_key = JSON_Handler::get_value( data, "key" ).GetString();
+	std::size_t data_size = JSON_Handler::get_value( data, "size" ).GetInt();
+	std::string data_value = JSON_Handler::get_value( data, "value" ).GetString();
+
+	void* value_ptr = &data_value;
+
+	rm::rmRef_h new_ref( data_key , value_ptr, data_size );
+	return new_ref;
+}
+
+void Reader::check_for_exception( bool error_info ) {
+	if ( error_info )
+}
+
+Reader::~Reader() {
+	// TODO Auto-generated destructor stub
+}
+

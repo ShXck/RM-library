@@ -1,15 +1,6 @@
-22:39:07 **** Incremental Build of configuration Debug for project ClientTest ****
+22:46:24 **** Incremental Build of configuration Debug for project ClientTest ****
 make all 
-Building file: ../src/network_h/NetworkHandler.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/marcelo/Documents/libs/rapidjson/include/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/network_h/NetworkHandler.d" -MT"src/network_h/NetworkHandler.o" -o "src/network_h/NetworkHandler.o" "../src/network_h/NetworkHandler.cpp"
-Finished building: ../src/network_h/NetworkHandler.cpp
- 
-Building target: ClientTest
-Invoking: GCC C++ Linker
-g++  -o "ClientTest"  ./src/network_h/JSONHandler.o ./src/network_h/NetworkHandler.o ./src/network_h/Reader.o  ./src/lib_ops/RMlib.o ./src/lib_ops/rmRefh.o  ./src/ClientTest.o   -lsfml-graphics -lsfml-audio -lsfml-network -lsfml-window -lsfml-system -lpthread
-Finished building target: ClientTest
- 
+make: Nothing to be done for 'all'.
 
-22:39:10 Build Finished (took 3s.723ms)
+22:46:24 Build Finished (took 166ms)
 

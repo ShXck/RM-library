@@ -1,0 +1,20 @@
+#include "TempRefContainer.h"
+
+Temp_Ref_Container::Temp_Ref_Container() : _used( false ), tmp_ref( nullptr ) { }
+
+bool Temp_Ref_Container::is_used() {
+	return _used;
+}
+
+bool Temp_Ref_Container::is_null() {
+	return tmp_ref == nullptr;
+}
+
+rm::rmRef_h* Temp_Ref_Container::ref() {
+	return tmp_ref;
+}
+
+Temp_Ref_Container::~Temp_Ref_Container() {
+	// TODO Auto-generated destructor stub
+}
+

@@ -1,0 +1,13 @@
+#include "Encrypter.h"
+
+Encrypter::Encrypter() {
+	// TODO Auto-generated constructor stub
+
+}
+
+std::string Encrypter::
+
+Encrypter::~Encrypter() {
+	// TODO Auto-generated destructor stub
+}
+

@@ -1,102 +1,15 @@
-22:36:09 **** Incremental Build of configuration Debug for project ClientTest ****
+23:13:17 **** Incremental Build of configuration Debug for project ClientTest ****
 make all 
-Building file: ../src/network_h/Reader.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/marcelo/Documents/libs/rapidjson/include/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/network_h/Reader.d" -MT"src/network_h/Reader.o" -o "src/network_h/Reader.o" "../src/network_h/Reader.cpp"
-Finished building: ../src/network_h/Reader.cpp
- 
 Building file: ../src/lib_ops/RMlib.cpp
 Invoking: GCC C++ Compiler
 g++ -I/home/marcelo/Documents/libs/rapidjson/include/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lib_ops/RMlib.d" -MT"src/lib_ops/RMlib.o" -o "src/lib_ops/RMlib.o" "../src/lib_ops/RMlib.cpp"
 Finished building: ../src/lib_ops/RMlib.cpp
  
-Building file: ../src/ClientTest.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/marcelo/Documents/libs/rapidjson/include/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ClientTest.d" -MT"src/ClientTest.o" -o "src/ClientTest.o" "../src/ClientTest.cpp"
-Finished building: ../src/ClientTest.cpp
- 
 Building target: ClientTest
 Invoking: GCC C++ Linker
 g++  -o "ClientTest"  ./src/network_h/Encrypter.o ./src/network_h/JSONHandler.o ./src/network_h/NetworkHandler.o ./src/network_h/Reader.o ./src/network_h/TempRefContainer.o  ./src/lib_ops/RMlib.o ./src/lib_ops/rmRefh.o  ./src/ClientTest.o   -lsfml-graphics -lsfml-audio -lsfml-network -lsfml-window -lsfml-system -lpthread
 Finished building target: ClientTest
  
-22:36:47 **** Incremental Build of configuration Debug for project ClientTest ****
-make all 
-make: Nothing to be done for 'all'.
-22:38:20 **** Incremental Build of configuration Debug for project ClientTest ****
-make all 
-Building file: ../src/network_h/Encrypter.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/marcelo/Documents/libs/rapidjson/include/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/network_h/Encrypter.d" -MT"src/network_h/Encrypter.o" -o "src/network_h/Encrypter.o" "../src/network_h/Encrypter.cpp"
-../src/network_h/Encrypter.cpp: In member function ‘std::__cxx11::string Encrypter::apply(std::__cxx11::string)’:
-../src/network_h/Encrypter.cpp:12:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for( int i = 0; i < data.size(); i++ ) {
-                  ~~^~~~~~~~~~~~~
-Finished building: ../src/network_h/Encrypter.cpp
- 
-Building file: ../src/network_h/Reader.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/marcelo/Documents/libs/rapidjson/include/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/network_h/Reader.d" -MT"src/network_h/Reader.o" -o "src/network_h/Reader.o" "../src/network_h/Reader.cpp"
-Finished building: ../src/network_h/Reader.cpp
- 
-Building target: ClientTest
-Invoking: GCC C++ Linker
-g++  -o "ClientTest"  ./src/network_h/Encrypter.o ./src/network_h/JSONHandler.o ./src/network_h/NetworkHandler.o ./src/network_h/Reader.o ./src/network_h/TempRefContainer.o  ./src/lib_ops/RMlib.o ./src/lib_ops/rmRefh.o  ./src/ClientTest.o   -lsfml-graphics -lsfml-audio -lsfml-network -lsfml-window -lsfml-system -lpthread
-Finished building target: ClientTest
- 
-22:39:20 **** Incremental Build of configuration Debug for project ClientTest ****
-make all 
-Building file: ../src/network_h/Reader.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/marcelo/Documents/libs/rapidjson/include/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/network_h/Reader.d" -MT"src/network_h/Reader.o" -o "src/network_h/Reader.o" "../src/network_h/Reader.cpp"
-Finished building: ../src/network_h/Reader.cpp
- 
-Building target: ClientTest
-Invoking: GCC C++ Linker
-g++  -o "ClientTest"  ./src/network_h/Encrypter.o ./src/network_h/JSONHandler.o ./src/network_h/NetworkHandler.o ./src/network_h/Reader.o ./src/network_h/TempRefContainer.o  ./src/lib_ops/RMlib.o ./src/lib_ops/rmRefh.o  ./src/ClientTest.o   -lsfml-graphics -lsfml-audio -lsfml-network -lsfml-window -lsfml-system -lpthread
-Finished building target: ClientTest
- 
-22:42:42 **** Incremental Build of configuration Debug for project ClientTest ****
-make all 
-Building file: ../src/network_h/Encrypter.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/marcelo/Documents/libs/rapidjson/include/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/network_h/Encrypter.d" -MT"src/network_h/Encrypter.o" -o "src/network_h/Encrypter.o" "../src/network_h/Encrypter.cpp"
-../src/network_h/Encrypter.cpp: In member function ‘std::__cxx11::string Encrypter::apply(std::__cxx11::string)’:
-../src/network_h/Encrypter.cpp:9:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for( int i = 0; i < data.size(); i++ ) {
-                  ~~^~~~~~~~~~~~~
-Finished building: ../src/network_h/Encrypter.cpp
- 
-Building file: ../src/network_h/JSONHandler.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/marcelo/Documents/libs/rapidjson/include/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/network_h/JSONHandler.d" -MT"src/network_h/JSONHandler.o" -o "src/network_h/JSONHandler.o" "../src/network_h/JSONHandler.cpp"
-Finished building: ../src/network_h/JSONHandler.cpp
- 
-Building file: ../src/network_h/NetworkHandler.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/marcelo/Documents/libs/rapidjson/include/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/network_h/NetworkHandler.d" -MT"src/network_h/NetworkHandler.o" -o "src/network_h/NetworkHandler.o" "../src/network_h/NetworkHandler.cpp"
-Finished building: ../src/network_h/NetworkHandler.cpp
- 
-Building file: ../src/network_h/Reader.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/marcelo/Documents/libs/rapidjson/include/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/network_h/Reader.d" -MT"src/network_h/Reader.o" -o "src/network_h/Reader.o" "../src/network_h/Reader.cpp"
-Finished building: ../src/network_h/Reader.cpp
- 
-Building file: ../src/lib_ops/RMlib.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/marcelo/Documents/libs/rapidjson/include/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lib_ops/RMlib.d" -MT"src/lib_ops/RMlib.o" -o "src/lib_ops/RMlib.o" "../src/lib_ops/RMlib.cpp"
-Finished building: ../src/lib_ops/RMlib.cpp
- 
-Building file: ../src/ClientTest.cpp
-Invoking: GCC C++ Compiler
-g++ -I/home/marcelo/Documents/libs/rapidjson/include/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ClientTest.d" -MT"src/ClientTest.o" -o "src/ClientTest.o" "../src/ClientTest.cpp"
-Finished building: ../src/ClientTest.cpp
- 
-Building target: ClientTest
-Invoking: GCC C++ Linker
-g++  -o "ClientTest"  ./src/network_h/Encrypter.o ./src/network_h/JSONHandler.o ./src/network_h/NetworkHandler.o ./src/network_h/Reader.o ./src/network_h/TempRefContainer.o  ./src/lib_ops/RMlib.o ./src/lib_ops/rmRefh.o  ./src/ClientTest.o   -lsfml-graphics -lsfml-audio -lsfml-network -lsfml-window -lsfml-system -lpthread
-Finished building target: ClientTest
- 
-22:46:24 **** Incremental Build of configuration Debug for project ClientTest ****
+23:13:44 **** Incremental Build of configuration Debug for project ClientTest ****
 make all 
 make: Nothing to be done for 'all'.

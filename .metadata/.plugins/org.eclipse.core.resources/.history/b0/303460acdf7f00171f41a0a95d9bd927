@@ -1,0 +1,18 @@
+/*
+ * TempRefContainer.cpp
+ *
+ *  Created on: Aug 12, 2017
+ *      Author: marcelo
+ */
+
+#include "TempRefContainer.h"
+
+Temp_Ref_Container::Temp_Ref_Container() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Temp_Ref_Container::~Temp_Ref_Container() {
+	// TODO Auto-generated destructor stub
+}
+

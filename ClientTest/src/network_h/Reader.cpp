@@ -2,26 +2,16 @@
 
 Reader::Reader() { }
 
-void Reader::read( std::string message, Temp_Ref_Container& container ) {
+void Reader::read( std::string message ) {
 
-	std::cout << "Message: " << message << std::endl;
+	std::string data = _encrypter.apply( message );
 
-	std::string __data__ = _encrypter.apply( message );
+	std::cout << data << std::endl;
 
-	const char* data = _encrypter.apply( message ).c_str();
+	int _instr = JSON_Handler::get_value( data.c_str(), "instruction" ).GetInt();
 
-	std::cout << "DATA: "<< __data__ << std::endl;
-
-	int _instr = JSON_Handler::get_value( data, "instruction" ).GetInt();
-
-	try {
-		check_for_exception( JSON_Handler::get_value( data, "error" ).GetBool(), JSON_Handler::get_value( data, "msg" ).GetString() );
-	} catch (Data_Excp& e ) {
-		e.what();
-	}
 	if( _instr == 2 ) {
-		rm::rmRef_h new_ref = process_data( _encrypter.apply( message ).c_str() );
-		container.set_ref( &new_ref );
+		rm::rmRef_h new_ref = process_data( data.c_str() );
 	}
 }
 
@@ -33,15 +23,10 @@ rm::rmRef_h Reader::process_data( const char* data ) {
 
 	void* value_ptr = &data_value;
 
-	rm::rmRef_h new_ref( data_key , value_ptr, data_size );
+	rm::rmRef_h new_ref( value_ptr, data_size, data_key );
 	return new_ref;
 }
 
-void Reader::check_for_exception( bool error, std::string msg  ) {
-	if ( error ) {
-		throw Data_Excp( msg.c_str() );
-	}
-}
 
 Reader::~Reader() {
 	// TODO Auto-generated destructor stub

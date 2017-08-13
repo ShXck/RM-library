@@ -1,0 +1,21 @@
+/*
+ * rmRefh.h
+ *
+ *  Created on: Aug 12, 2017
+ *      Author: marcelo
+ */
+
+#ifndef LIB_OPS_RMREFH_H_
+#define LIB_OPS_RMREFH_H_
+
+namespace rm {
+
+class rmRef_h {
+public:
+	rmRef_h();
+	virtual ~rmRef_h();
+};
+
+} /* namespace rm */
+
+#endif /* LIB_OPS_RMREFH_H_ */

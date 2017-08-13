@@ -1,0 +1,17 @@
+/*
+ * TempRefContainer.h
+ *
+ *  Created on: Aug 12, 2017
+ *      Author: marcelo
+ */
+
+#ifndef NETWORK_H_TEMPREFCONTAINER_H_
+#define NETWORK_H_TEMPREFCONTAINER_H_
+
+class Temp_Ref_Container {
+public:
+	Temp_Ref_Container();
+	virtual ~Temp_Ref_Container();
+};
+
+#endif /* NETWORK_H_TEMPREFCONTAINER_H_ */

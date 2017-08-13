@@ -2,33 +2,25 @@
 
 namespace rm {
 
-rmRef_h::rmRef_h( const char* key, void* value, std::size_t size ) : _key( key ), _value( value ), _size( size ) {
-}
+rmRef_h::rmRef_h( void* value, std::size_t size, const char* key ) : _value( value ), _size( size ), _key( key )  { }
 
-bool rmRef_h::operator == ( const rmRef_h& rm_h ) {
-	if ( _key == rm_h.key() ) {
+bool rmRef_h::operator !=( const rmRef_h& ref ) {
+	if ( _key != ref._key ) {
 		return true;
 	}
 	return false;
 }
 
-bool rmRef_h::operator !=( const rmRef_h& rm_h ) {
-	if ( _key != rm_h.key() ) {
+bool rmRef_h::operator ==( const rmRef_h& ref ) {
+	if ( _key == ref._key ) {
 		return true;
 	}
 	return false;
 }
 
-std::size_t rmRef_h::size() {
-	return _size;
-}
-
-const char* rmRef_h::key() const {
-	return _key;
-}
-
-void* rmRef_h::value() {
-	return _value;
+std::ostream& operator << ( std::ostream& strm, const rmRef_h& ref ) {
+	strm << ref._key;
+	return strm;
 }
 
 rmRef_h::~rmRef_h() {

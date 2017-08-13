@@ -19,11 +19,15 @@ void Network_Handler::wait_for_response() {
 	while ( !received ) {
 		if ( _socket.receive( _packet ) == sf::Socket::Done ) {
 			if( _packet >> _message ) {
-				_reader.read( _message, ref_container );
+				_reader.read( _message );
 				received = true;
 			}
 		}
 	}
+}
+
+rm::rmRef_h* Network_Handler::get_resource() {
+	return ref_container.ref();
 }
 
 void Network_Handler::send( std::string message ) {
@@ -36,9 +40,6 @@ void Network_Handler::check_server_status() {
 
 }
 
-rm::rmRef_h* Network_Handler::get_resource() {
-	return ref_container.ref();
-}
 
 Network_Handler::~Network_Handler() {
 	// TODO Auto-generated destructor stub

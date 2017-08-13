@@ -9,7 +9,7 @@ std::string JSON_Handler::build_new( const char* key, void* value, std::size_t s
 	_doc.SetObject();
 	Alloc _alloc = _doc.GetAllocator();
 
-	std::string *casted_value = static_cast<std::string*>( value );
+	std::string *casted_value = static_cast< std::string* >( value );
 
 	{
 		rapidjson::Value str_key;

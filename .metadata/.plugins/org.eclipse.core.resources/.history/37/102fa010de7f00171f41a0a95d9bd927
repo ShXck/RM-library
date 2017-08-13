@@ -1,0 +1,21 @@
+#ifndef LIB_OPS_RMREFH_H_
+#define LIB_OPS_RMREFH_H_
+#include <cstddef>
+#include <string>
+#include <iostream>
+
+namespace rm {
+
+class rmRef_h {
+public:
+	void* _value;
+	std::size_t _size;
+	const char* _key;
+public:
+	rmRef_h( void* value, std::size_t size, const char* key );
+	virtual ~rmRef_h();
+};
+
+} /* namespace rm */
+
+#endif /* LIB_OPS_RMREFH_H_ */

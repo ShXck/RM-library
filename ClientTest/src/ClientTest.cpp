@@ -31,7 +31,7 @@ void process( int command , rm::RM_lib& rm_lib ) {
 		std::string _key;
 		std::cout << "Enter the key: " << std::endl;
 		std::getline( std::cin, _key );
-
+		rm_lib.rm_delete( &rm_lib.find_rm_ref( _key ) );
 		break;
 	}
 

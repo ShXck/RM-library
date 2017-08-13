@@ -32,8 +32,8 @@ src/ClientTest.o: ../src/ClientTest.cpp ../src/lib_ops/RMlib.h \
  /home/marcelo/Documents/libs/rapidjson/include/rapidjson/internal/itoa.h \
  /home/marcelo/Documents/libs/rapidjson/include/rapidjson/stringbuffer.h \
  /home/marcelo/Documents/libs/rapidjson/include/rapidjson/stringbuffer.h \
- ../src/lib_ops/../network_h/TempRefContainer.h \
  ../src/lib_ops/../network_h/Encrypter.h \
+ ../src/lib_ops/../network_h/TempRefContainer.h \
  ../src/lib_ops/../network_h/JSONHandler.h \
  ../src/lib_ops/../data_structs/LinkedList.h
 
@@ -107,9 +107,9 @@ src/ClientTest.o: ../src/ClientTest.cpp ../src/lib_ops/RMlib.h \
 
 /home/marcelo/Documents/libs/rapidjson/include/rapidjson/stringbuffer.h:
 
-../src/lib_ops/../network_h/TempRefContainer.h:
-
 ../src/lib_ops/../network_h/Encrypter.h:
+
+../src/lib_ops/../network_h/TempRefContainer.h:
 
 ../src/lib_ops/../network_h/JSONHandler.h:
 

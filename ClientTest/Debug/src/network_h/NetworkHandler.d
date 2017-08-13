@@ -30,7 +30,7 @@ src/network_h/NetworkHandler.o: ../src/network_h/NetworkHandler.cpp \
  /home/marcelo/Documents/libs/rapidjson/include/rapidjson/internal/itoa.h \
  /home/marcelo/Documents/libs/rapidjson/include/rapidjson/stringbuffer.h \
  /home/marcelo/Documents/libs/rapidjson/include/rapidjson/stringbuffer.h \
- ../src/network_h/TempRefContainer.h ../src/network_h/Encrypter.h
+ ../src/network_h/Encrypter.h ../src/network_h/TempRefContainer.h
 
 ../src/network_h/NetworkHandler.h:
 
@@ -98,6 +98,6 @@ src/network_h/NetworkHandler.o: ../src/network_h/NetworkHandler.cpp \
 
 /home/marcelo/Documents/libs/rapidjson/include/rapidjson/stringbuffer.h:
 
-../src/network_h/TempRefContainer.h:
-
 ../src/network_h/Encrypter.h:
+
+../src/network_h/TempRefContainer.h:

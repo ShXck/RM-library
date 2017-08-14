@@ -75,6 +75,34 @@ std::string JSON_Handler::build_deleted( const char* key ) {
 	return str_buffer.GetString();
 }
 
+std::string JSON_Handler::build_set( Linked_List< std::string > list ) {
+
+	std::cout << "List: " << std::endl;
+	list.display();
+
+	rapidjson::Document _doc;
+	_doc.SetObject();
+	rapidjson::Value array( rapidjson::kArrayType );
+	Alloc _alloc = _doc.GetAllocator();
+
+	for( int i = 0; i < list.size(); i++ ) {
+
+		rapidjson::Value str_val;
+		str_val.SetString( list.get( i ).c_str(), _alloc );
+
+		array.PushBack( str_val, _alloc );
+	}
+	_doc.AddMember( "keys", array, _alloc );
+	_doc.AddMember( "instruction", 4, _alloc );
+	_doc.AddMember( "key", "empty", _alloc );
+
+	rapidjson::StringBuffer str_buffer;
+	Writer _writer( str_buffer );
+	_doc.Accept( _writer );
+
+	return str_buffer.GetString();
+}
+
 rapidjson::Value& JSON_Handler::get_value( const char* json, const char* json_key ) {
 
 	rapidjson::Document _doc;

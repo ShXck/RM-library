@@ -133,20 +133,20 @@ public:
 		return false;
 	}
 
-	T& get( T data ) {
+	T& get( int pos ) {
 
 		std::runtime_error not_found( "Element not found" );
 
-		if( is_empty() ) {
-			throw not_found;
-		} else {
-			Node<T> *_current = _head;
-			while( _current != nullptr ) {
-				if( _current->_data == data ) {
-					return _current->_data;
-				}
+		if( pos > _size || pos < 0 || is_empty()  ){
+			throw std::invalid_argument( "Impossible action. Invalid position value" );
+		} else  {
+			int i = 0;
+			Node< T >* _current = _head;
+			while( i < pos ) {
 				_current = _current->_next;
+				i++;
 			}
+			return _current->_data;
 		}
 		throw not_found;
 	}

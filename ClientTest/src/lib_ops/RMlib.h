@@ -21,13 +21,13 @@ public:
 	void rm_init( int ip_m, int port_m, int ip_HA, int port_HA );
 	void rm_new( const char* key, void* value, std::size_t size );
 	rmRef_h* rm_get( const char* key );
-	void rm_delete( rmRef_h* handler );
+	void rm_get_set( Linked_List< std::string > keys );
+	void rm_delete( const char* key );
 	void rm_replace( const char* key, void* new_value );
-	rmRef_h& find_rm_ref( std::string tmp_key );
 	virtual ~RM_lib();
 private:
 	Network_Handler _handler;
-	Linked_List< rmRef_h > rm_refs;
+	//Linked_List< rmRef_h > rm_refs;
 };
 
 } /* namespace rm */

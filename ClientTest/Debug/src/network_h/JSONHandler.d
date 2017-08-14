@@ -28,7 +28,8 @@ src/network_h/JSONHandler.o: ../src/network_h/JSONHandler.cpp \
  /home/marcelo/Documents/libs/rapidjson/include/rapidjson/internal/itoa.h \
  /home/marcelo/Documents/libs/rapidjson/include/rapidjson/internal/itoa.h \
  /home/marcelo/Documents/libs/rapidjson/include/rapidjson/stringbuffer.h \
- /home/marcelo/Documents/libs/rapidjson/include/rapidjson/stringbuffer.h
+ /home/marcelo/Documents/libs/rapidjson/include/rapidjson/stringbuffer.h \
+ ../src/network_h/../data_structs/LinkedList.h
 
 ../src/network_h/JSONHandler.h:
 
@@ -89,3 +90,5 @@ src/network_h/JSONHandler.o: ../src/network_h/JSONHandler.cpp \
 /home/marcelo/Documents/libs/rapidjson/include/rapidjson/stringbuffer.h:
 
 /home/marcelo/Documents/libs/rapidjson/include/rapidjson/stringbuffer.h:
+
+../src/network_h/../data_structs/LinkedList.h:

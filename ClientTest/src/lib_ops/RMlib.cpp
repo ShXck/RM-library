@@ -25,8 +25,14 @@ rmRef_h* RM_lib::rm_get( const char* key ) {
 	return _handler.get_resource();
 }
 
-void RM_lib::rm_delete( rmRef_h* handler ) {
-	std::string deleted_resource = JSON_Handler::build_deleted( handler->_key );
+void RM_lib::rm_get_set( Linked_List< std::string > keys ) {
+	std::string _set = JSON_Handler::build_set( keys );
+	_handler.send( _set );
+	_handler.wait_for_response();
+}
+
+void RM_lib::rm_delete( const char* key ) {
+	std::string deleted_resource = JSON_Handler::build_deleted( key );
 	_handler.send( deleted_resource );
 	_handler.wait_for_response();
 }
@@ -35,10 +41,6 @@ void RM_lib::rm_replace( const char* key, void* new_value ) {
 
 }
 
-rmRef_h& RM_lib::find_rm_ref( std::string tmp_key ) {
-	rmRef_h tmp_ref( nullptr, 0, tmp_key.c_str() );
-	return rm_refs.get( tmp_ref );
-}
 
 RM_lib::~RM_lib() {
 

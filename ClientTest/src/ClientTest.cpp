@@ -2,6 +2,7 @@
 #include <string>
 #include "lib_ops/RMlib.h"
 #include "data_structs/LinkedList.h"
+#include "util.hpp"
 
 void process( int command , rm::RM_lib& rm_lib ) {
 
@@ -18,7 +19,7 @@ void process( int command , rm::RM_lib& rm_lib ) {
 		std::cout << "Enter the value: " << std::endl;
 		std::getline( std::cin, _value );
 
-		rm_lib.rm_new( _name.c_str() , &_value , sizeof( _value ) );
+		rm_lib.rm_new( _name.c_str() , &_value , util::check_size( _value ) );
 		break;
 	}
 	case 3: {
@@ -35,7 +36,7 @@ void process( int command , rm::RM_lib& rm_lib ) {
 		rm_lib.rm_delete( _key.c_str() );
 		break;
 	}
-	case 5:
+	case 5: {
 		std::cout << "Type the keys to be retrieved! Type . to exit!" << std::endl;
 		std::string _text;
 		Linked_List <std::string> _keys;
@@ -48,6 +49,21 @@ void process( int command , rm::RM_lib& rm_lib ) {
 		rm_lib.rm_get_set( _keys );
 		break;
 	}
+	case 6: {
+		std::cout << "Type the key to replace: " << std::endl;
+		std::string _key;
+		std::getline( std::cin, _key );
+		std::cout << "Type the new value: " << std::endl;
+		std::string _val;
+		std::getline( std::cin, _val );
+		rm_lib.rm_replace( _key.c_str(), &_val );
+		break;
+	}
+	case 7: {
+		rm_lib.rm_disconnect();
+		break;
+	}
+	}
 }
 
 int main() {
@@ -56,8 +72,9 @@ int main() {
 	std::string _option;
 
 	while ( true ) {
-		std::cout << "WHat would you like to do?" << "\n\t 1. Connect." << "\n\t 2. Create value."
-					<< "\n\t 3. Get value."  << "\n\t 4. Delete value. " << "\n\t 5. Get set of values" << std::endl;
+		std::cout << "What would you like to do?" << "\n\t 1. Connect." << "\n\t 2. Create value."
+					<< "\n\t 3. Get value."  << "\n\t 4. Delete value. " << "\n\t 5. Get set of values"
+					<< "\n\t 6. Replace value." <<  "\n\t 7. Disconnect" << std::endl;
 
 		std::getline( std::cin, _option );
 

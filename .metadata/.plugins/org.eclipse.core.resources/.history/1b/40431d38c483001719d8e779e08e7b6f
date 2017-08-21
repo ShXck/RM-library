@@ -1,0 +1,10 @@
+#ifndef UTIL_HPP_
+#define UTIL_HPP_
+
+namespace util {
+
+}
+
+
+
+#endif /* UTIL_HPP_ */

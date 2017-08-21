@@ -11,6 +11,7 @@
 #include "../network_h/NetworkHandler.h"
 #include "../network_h/JSONHandler.h"
 #include "../data_structs/LinkedList.h"
+#include "../util.hpp"
 
 namespace rm {
 
@@ -24,10 +25,11 @@ public:
 	void rm_get_set( Linked_List< std::string > keys );
 	void rm_delete( const char* key );
 	void rm_replace( const char* key, void* new_value );
+	void rm_disconnect();
 	virtual ~RM_lib();
 private:
 	Network_Handler _handler;
-	//Linked_List< rmRef_h > rm_refs;
+	char* client_id;
 };
 
 } /* namespace rm */

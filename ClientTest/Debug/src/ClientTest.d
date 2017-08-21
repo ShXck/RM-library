@@ -36,8 +36,8 @@ src/ClientTest.o: ../src/ClientTest.cpp ../src/lib_ops/RMlib.h \
  ../src/lib_ops/../network_h/Encrypter.h \
  ../src/lib_ops/../network_h/TempRefContainer.h \
  ../src/lib_ops/../network_h/JSONHandler.h \
- ../src/lib_ops/../data_structs/LinkedList.h \
- ../src/data_structs/LinkedList.h
+ ../src/lib_ops/../data_structs/LinkedList.h ../src/lib_ops/../util.hpp \
+ ../src/data_structs/LinkedList.h ../src/util.hpp
 
 ../src/lib_ops/RMlib.h:
 
@@ -119,4 +119,8 @@ src/ClientTest.o: ../src/ClientTest.cpp ../src/lib_ops/RMlib.h \
 
 ../src/lib_ops/../data_structs/LinkedList.h:
 
+../src/lib_ops/../util.hpp:
+
 ../src/data_structs/LinkedList.h:
+
+../src/util.hpp:

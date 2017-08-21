@@ -36,7 +36,7 @@ src/lib_ops/RMlib.o: ../src/lib_ops/RMlib.cpp ../src/lib_ops/RMlib.h \
  ../src/lib_ops/../network_h/Encrypter.h \
  ../src/lib_ops/../network_h/TempRefContainer.h \
  ../src/lib_ops/../network_h/JSONHandler.h \
- ../src/lib_ops/../data_structs/LinkedList.h
+ ../src/lib_ops/../data_structs/LinkedList.h ../src/lib_ops/../util.hpp
 
 ../src/lib_ops/RMlib.h:
 
@@ -117,3 +117,5 @@ src/lib_ops/RMlib.o: ../src/lib_ops/RMlib.cpp ../src/lib_ops/RMlib.h \
 ../src/lib_ops/../network_h/JSONHandler.h:
 
 ../src/lib_ops/../data_structs/LinkedList.h:
+
+../src/lib_ops/../util.hpp:

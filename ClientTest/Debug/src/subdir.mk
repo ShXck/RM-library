@@ -4,13 +4,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/ClientTest.cpp 
+../src/ClientTest.cpp \
+../src/util.cpp 
 
 OBJS += \
-./src/ClientTest.o 
+./src/ClientTest.o \
+./src/util.o 
 
 CPP_DEPS += \
-./src/ClientTest.d 
+./src/ClientTest.d \
+./src/util.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

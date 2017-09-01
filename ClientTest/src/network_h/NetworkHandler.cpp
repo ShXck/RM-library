@@ -1,12 +1,20 @@
 #include "NetworkHandler.h"
 
-Network_Handler::Network_Handler() {
-}
+Network_Handler::Network_Handler() { }
 
-void Network_Handler::make_connection() {
+void Network_Handler::connect_to_main() {
+	_socket.disconnect();
 	sf::IpAddress _address = sf::IpAddress::getLocalAddress();
 	_socket.setBlocking( false );
-	_socket.connect( _address, PORT );
+	_socket.connect( _address, PORT_M );
+}
+
+void Network_Handler::connect_to_ha() {
+	std::cout << "CONNECTED TO HA" << std::endl;
+	_socket.disconnect();
+	sf::IpAddress _address = sf::IpAddress::getLocalAddress();
+	_socket.setBlocking( false );
+	_socket.connect( _address, PORT_HA );
 }
 
 
@@ -37,11 +45,37 @@ void Network_Handler::send( std::string message ) {
 }
 
 void Network_Handler::check_server_status() {
+	std::string check_msg = JSON_Handler::build_check_msg();
+	send( check_msg );
+	wait_for_check_response();
+}
 
+void Network_Handler::wait_for_check_response() {
+
+	sf::Packet _packet;
+	std::string _message;
+
+	std::time_t _start, _end;
+	double _elapsed;
+
+	time( &_start );
+
+	while( _elapsed < 2 ) {
+		time( &_end );
+		_elapsed = difftime( _end, _start );
+		if ( _socket.receive( _packet ) == sf::Socket::Done ) {
+			if( _packet >> _message ) {
+				_reader.read( _message );
+				break;
+			}
+		}
+	}
+
+	if( _elapsed >= 2 ) {
+		connect_to_ha();
+	}
 }
 
 
-Network_Handler::~Network_Handler() {
-	// TODO Auto-generated destructor stub
-}
+Network_Handler::~Network_Handler() { }
 

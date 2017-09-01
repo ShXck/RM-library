@@ -28,6 +28,7 @@ public:
 	static std::string build_set( Linked_List < std::string > list );
 	static std::string build_replace( const char* key, void* new_val );
 	static std::string build_dc_msg( char* key );
+	static std::string build_check_msg();
 	static rapidjson::Value& get_value ( const char* json, const char* json_key );
 	virtual ~JSON_Handler();
 };

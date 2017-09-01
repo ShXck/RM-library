@@ -1,0 +1,16 @@
+#ifndef NETWORK_H_STATUSCHECKER_H_
+#define NETWORK_H_STATUSCHECKER_H_
+#include <chrono>
+#include <thread>
+#include <future>
+#include <SFML/Network.hpp>
+#include "Encrypter.h"
+#include "JSONHandler.h"
+
+class Status_Checker {
+public:
+	Status_Checker( );
+	virtual ~Status_Checker();
+};
+
+#endif /* NETWORK_H_STATUSCHECKER_H_ */

@@ -36,8 +36,6 @@ std::string JSON_Handler::build_new( const char* key, void* value, char* id, std
 	Writer _writer( str_buffer );
 	_doc.Accept( _writer );
 
-	std::cout << str_buffer.GetString() << std::endl;
-
 	return str_buffer.GetString();
 }
 
@@ -148,6 +146,21 @@ std::string JSON_Handler::build_dc_msg( char* key ) {
 	}
 
 	_doc.AddMember( "instruction", DISCONNECT, _alloc );
+	rapidjson::StringBuffer str_buffer;
+	Writer _writer( str_buffer );
+	_doc.Accept( _writer );
+
+	return str_buffer.GetString();
+}
+
+std::string JSON_Handler::build_check_msg() {
+	rapidjson::Document _doc;
+	_doc.SetObject();
+	Alloc _alloc = _doc.GetAllocator();
+
+	_doc.AddMember( "instruction", 8, _alloc );
+	_doc.AddMember( "key", "NONE", _alloc );
+
 	rapidjson::StringBuffer str_buffer;
 	Writer _writer( str_buffer );
 	_doc.Accept( _writer );

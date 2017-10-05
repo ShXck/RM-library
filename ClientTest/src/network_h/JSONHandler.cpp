@@ -39,6 +39,40 @@ std::string JSON_Handler::build_new( const char* key, void* value, char* id, std
 	return str_buffer.GetString();
 }
 
+std::string JSON_Handler::build_new( const char* key, std::string value, char* id, std::size_t size ) {
+
+	rapidjson::Document _doc;
+	_doc.SetObject();
+	Alloc _alloc = _doc.GetAllocator();
+
+	{
+		rapidjson::Value str_key;
+		str_key.SetString( key, _alloc );
+		_doc.AddMember( "key", str_key, _alloc );
+	}
+
+	{
+		rapidjson::Value str_id;
+		str_id.SetString( id, _alloc );
+		_doc.AddMember( "id", str_id, _alloc );
+	}
+
+	{
+		rapidjson::Value value_str;
+		value_str.SetString( value.c_str(), _alloc );
+		_doc.AddMember( "value", value_str, _alloc );
+	}
+
+	_doc.AddMember( "size", size, _alloc );
+	_doc.AddMember( "instruction", NEW, _alloc );
+
+	rapidjson::StringBuffer str_buffer;
+	Writer _writer( str_buffer );
+	_doc.Accept( _writer );
+
+	return str_buffer.GetString();
+}
+
 std::string JSON_Handler::build_get( const char* key ) {
 
 	rapidjson::Document _doc;

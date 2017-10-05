@@ -8,11 +8,11 @@ namespace rm {
 
 class rmRef_h {
 public:
-	void* _value;
+	char* _value;
 	std::size_t _size;
 	const char* _key;
 public:
-	rmRef_h( void* value, std::size_t size, const char* key );
+	rmRef_h( char* value, std::size_t size, const char* key );
 	bool operator != ( const rmRef_h& ref );
 	bool operator == ( const rmRef_h& ref );
 	friend std::ostream& operator << ( std::ostream& strm, const rmRef_h& ref );

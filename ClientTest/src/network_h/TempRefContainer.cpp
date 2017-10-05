@@ -15,5 +15,5 @@ rm::rmRef_h* Temp_Ref_Container::ref() {
 }
 
 Temp_Ref_Container::~Temp_Ref_Container() {
-	// TODO Auto-generated destructor stub
+	delete tmp_ref;
 }

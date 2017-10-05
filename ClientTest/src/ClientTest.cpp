@@ -19,14 +19,15 @@ void process( int command , rm::RM_lib& rm_lib ) {
 		std::cout << "Enter the value: " << std::endl;
 		std::getline( std::cin, _value );
 
-		rm_lib.rm_new( _name.c_str() , &_value , util::check_size( _value ) );
+		rm_lib.rm_new( _name.c_str() , _value , util::check_size( _value ) );
 		break;
 	}
 	case 3: {
 		std::string _key;
 		std::cout << "Enter the key: " << std::endl;
 		std::getline( std::cin, _key );
-		rm_lib.rm_get( _key.c_str() );
+		rm::rmRef_h* r = rm_lib.rm_get( _key.c_str() );
+		std::cout << "REF:" << r->_value << std::endl;
 		break;
 	}
 	case 4: {
@@ -46,7 +47,8 @@ void process( int command , rm::RM_lib& rm_lib ) {
 			if( _text == "." ) break;
 			_keys.add( _text );
 		}
-		rm_lib.rm_get_set( _keys );
+		rm::rmRef_h* r = rm_lib.rm_get_set( _keys );
+		std::cout << "REF_SET: " << r->_value << std::endl;
 		break;
 	}
 	case 6: {
@@ -57,6 +59,8 @@ void process( int command , rm::RM_lib& rm_lib ) {
 		std::string _val;
 		std::getline( std::cin, _val );
 		rm_lib.rm_replace( _key.c_str(), &_val );
+		char* r = rm_lib.rm_get( _key.c_str() )->_value;
+		std::cout << "R:" << r << std::endl;
 		break;
 	}
 	case 7: {

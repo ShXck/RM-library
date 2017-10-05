@@ -1,15 +1,87 @@
-01:04:14 **** Incremental Build of configuration Debug for project ClientTest ****
+22:57:35 **** Incremental Build of configuration Debug for project ClientTest ****
 make all 
-Building file: ../src/network_h/NetworkHandler.cpp
+Building file: ../src/ClientTest.cpp
 Invoking: GCC C++ Compiler
-g++ -I/home/marcelo/Documents/libs/rapidjson/include/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/network_h/NetworkHandler.d" -MT"src/network_h/NetworkHandler.o" -o "src/network_h/NetworkHandler.o" "../src/network_h/NetworkHandler.cpp"
-Finished building: ../src/network_h/NetworkHandler.cpp
+g++ -I/home/marcelo/Documents/libs/rapidjson/include/ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ClientTest.d" -MT"src/ClientTest.o" -o "src/ClientTest.o" "../src/ClientTest.cpp"
+Finished building: ../src/ClientTest.cpp
  
 Building target: ClientTest
 Invoking: GCC C++ Linker
 g++  -o "ClientTest"  ./src/network_h/Encrypter.o ./src/network_h/JSONHandler.o ./src/network_h/NetworkHandler.o ./src/network_h/Reader.o ./src/network_h/TempRefContainer.o  ./src/lib_ops/RMlib.o ./src/lib_ops/rmRefh.o  ./src/ClientTest.o ./src/util.o   -lsfml-graphics -lsfml-audio -lsfml-network -lsfml-window -lsfml-system -lpthread
 Finished building target: ClientTest
  
-01:04:29 **** Incremental Build of configuration Debug for project ClientTest ****
+22:57:44 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+22:31:21 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+00:26:03 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+00:32:05 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+21:27:51 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+22:10:29 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+21:19:39 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+21:21:29 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+21:24:06 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+21:26:44 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+18:54:49 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+18:55:06 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+18:57:22 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+18:59:17 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+19:05:51 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+10:35:48 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+10:42:36 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+10:48:28 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+10:52:26 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+10:59:10 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+11:02:04 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+11:03:18 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+11:06:11 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+11:10:27 **** Incremental Build of configuration Debug for project ClientTest ****
+make all 
+make: Nothing to be done for 'all'.
+11:19:50 **** Incremental Build of configuration Debug for project ClientTest ****
 make all 
 make: Nothing to be done for 'all'.

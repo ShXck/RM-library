@@ -27,7 +27,7 @@ void Network_Handler::wait_for_response() {
 	while ( !received ) {
 		if ( _socket.receive( _packet ) == sf::Socket::Done ) {
 			if( _packet >> _message ) {
-				_reader.read( _message );
+				_reader.read( _message, ref_container );
 				received = true;
 			}
 		}
@@ -65,7 +65,7 @@ void Network_Handler::wait_for_check_response() {
 		_elapsed = difftime( _end, _start );
 		if ( _socket.receive( _packet ) == sf::Socket::Done ) {
 			if( _packet >> _message ) {
-				_reader.read( _message );
+				_reader.read( _message, ref_container );
 				break;
 			}
 		}

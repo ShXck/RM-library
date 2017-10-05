@@ -15,6 +15,13 @@ void RM_lib::rm_new( const char* key, void* value, std::size_t size ) {
 	_handler.wait_for_response();
 }
 
+void RM_lib::rm_new( const char* key, std::string value, std::size_t size ) {
+	std::string new_resource = JSON_Handler::build_new( key, value, client_id, size );
+	_handler.check_server_status();
+	_handler.send( new_resource );
+	_handler.wait_for_response();
+}
+
 
 rmRef_h* RM_lib::rm_get( const char* key ) {
 	std::string get_resource = JSON_Handler::build_get( key );
@@ -24,11 +31,12 @@ rmRef_h* RM_lib::rm_get( const char* key ) {
 	return _handler.get_resource();
 }
 
-void RM_lib::rm_get_set( Linked_List< std::string > keys ) {
+rmRef_h* RM_lib::rm_get_set( Linked_List< std::string > keys ) {
 	std::string _set = JSON_Handler::build_set( keys );
 	_handler.check_server_status();
 	_handler.send( _set );
 	_handler.wait_for_response();
+	return _handler.get_resource();
 }
 
 void RM_lib::rm_delete( const char* key ) {
